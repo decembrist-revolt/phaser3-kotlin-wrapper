@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Cameras.Scene2D") JsNonModule]
 package org.decembrist.Phaser.Cameras.Scene2D
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.GameObjects.Components.Alpha
 import org.decembrist.Phaser.Geom.Geom
 import org.decembrist.Phaser.Phaser
@@ -26,7 +27,7 @@ open external class BaseCamera(x: Number, y: Number, width: Number, height: Numb
     open var worldView: Geom.Rectangle = definedExternally
     open var dirty: Boolean = definedExternally
     open var transparent: Boolean = definedExternally
-    open var backgroundColor: org.decembrist.Phaser.Display.Display.Color = definedExternally
+    open var backgroundColor: Display.Color = definedExternally
     override var alpha: Number = definedExternally
     open var disableCull: Boolean = definedExternally
     open var midPoint: org.decembrist.Phaser.Math.Vector2 = definedExternally

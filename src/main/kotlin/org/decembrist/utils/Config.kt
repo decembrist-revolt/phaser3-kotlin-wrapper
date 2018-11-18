@@ -1,5 +1,6 @@
 package org.decembrist.utils
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Phaser
 import org.w3c.dom.*
 import org.w3c.dom.events.EventTarget
@@ -857,7 +858,7 @@ external interface GlobalPlugin: Config {
 external interface RendererConfig: Config {
     var clearBeforeRender: Boolean
     var antialias: Boolean
-    var backgroundColor: org.decembrist.Phaser.Display.Display.Color
+    var backgroundColor: Display.Color
     var resolution: Number
     var autoResize: Boolean
     var roundPixels: Boolean

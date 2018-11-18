@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Textures") JsNonModule]
 package org.decembrist.Phaser.Textures
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.SpriteSheetConfig
 import org.decembrist.utils.SpriteSheetFromAtlasConfig
@@ -26,7 +27,7 @@ open external class CanvasTexture(manager: CanvasTexture, key: String, source: H
     open fun update(): CanvasTexture = definedExternally
     open fun draw(x: Number, y: Number, source: HTMLCanvasElement): CanvasTexture = definedExternally
     open fun draw(x: Number, y: Number, source: HTMLImageElement): CanvasTexture = definedExternally
-    open fun getPixel(x: Number, y: Number, out: org.decembrist.Phaser.Display.Display.Color? = definedExternally /* null */): org.decembrist.Phaser.Display.Display.Color = definedExternally
+    open fun getPixel(x: Number, y: Number, out: Display.Color? = definedExternally /* null */): Display.Color = definedExternally
     open fun refresh(): CanvasTexture = definedExternally
     open fun getCanvas(): HTMLCanvasElement = definedExternally
     open fun getContext(): CanvasRenderingContext2D = definedExternally
@@ -149,8 +150,8 @@ open external class TextureManager(game: Phaser.Game) : org.decembrist.Phaser.Ev
     open fun getFrame(key: String, frame: String? = definedExternally /* null */): Frame = definedExternally
     open fun getFrame(key: String, frame: Number? = definedExternally /* null */): Frame = definedExternally
     open fun getTextureKeys(): Array<String> = definedExternally
-    open fun getPixel(x: Number, y: Number, key: String, frame: String): org.decembrist.Phaser.Display.Display.Color = definedExternally
-    open fun getPixel(x: Number, y: Number, key: String, frame: Number): org.decembrist.Phaser.Display.Display.Color = definedExternally
+    open fun getPixel(x: Number, y: Number, key: String, frame: String): Display.Color = definedExternally
+    open fun getPixel(x: Number, y: Number, key: String, frame: Number): Display.Color = definedExternally
     open fun getPixelAlpha(x: Number, y: Number, key: String, frame: String): Number = definedExternally
     open fun getPixelAlpha(x: Number, y: Number, key: String, frame: Number): Number = definedExternally
     open fun setTexture(gameObject: org.decembrist.Phaser.GameObjects.GameObject, key: String, frame: String): org.decembrist.Phaser.GameObjects.GameObject = definedExternally

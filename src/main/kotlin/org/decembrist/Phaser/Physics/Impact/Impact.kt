@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Physics.Impact") JsNonModule]
 package org.decembrist.Phaser.Physics.Impact
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
 import org.decembrist.Phaser.Math.Vector2
 import org.decembrist.Phaser.Phaser
@@ -217,11 +218,11 @@ open external class ImpactImage : org.decembrist.Phaser.GameObjects.Image, org.d
     override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
     override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.BitmapMask): ImpactImage /* this */ = definedExternally
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.GeometryMask): ImpactImage /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.BitmapMask): ImpactImage /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.GeometryMask): ImpactImage /* this */ = definedExternally
     override fun clearMask(destroyMask: Boolean?): ImpactImage /* this */ = definedExternally
-    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): org.decembrist.Phaser.Display.Masks.BitmapMask = definedExternally
-    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): org.decembrist.Phaser.Display.Masks.GeometryMask = definedExternally
+    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): Display.Masks.BitmapMask = definedExternally
+    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): Display.Masks.GeometryMask = definedExternally
     override fun setOrigin(x: Number?, y: Number?): ImpactImage /* this */ = definedExternally
     override fun setOriginFromFrame(): ImpactImage /* this */ = definedExternally
     override fun setDisplayOrigin(x: Number?, y: Number?): ImpactImage /* this */ = definedExternally
@@ -387,11 +388,11 @@ open external class ImpactSprite : org.decembrist.Phaser.GameObjects.Sprite, org
     override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
     override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.BitmapMask): ImpactSprite /* this */ = definedExternally
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.GeometryMask): ImpactSprite /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.BitmapMask): ImpactSprite /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.GeometryMask): ImpactSprite /* this */ = definedExternally
     override fun clearMask(destroyMask: Boolean?): ImpactSprite /* this */ = definedExternally
-    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): org.decembrist.Phaser.Display.Masks.BitmapMask = definedExternally
-    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): org.decembrist.Phaser.Display.Masks.GeometryMask = definedExternally
+    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): Display.Masks.BitmapMask = definedExternally
+    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): Display.Masks.GeometryMask = definedExternally
     override fun setOrigin(x: Number?, y: Number?): ImpactSprite /* this */ = definedExternally
     override fun setOriginFromFrame(): ImpactSprite /* this */ = definedExternally
     override fun setDisplayOrigin(x: Number?, y: Number?): ImpactSprite /* this */ = definedExternally

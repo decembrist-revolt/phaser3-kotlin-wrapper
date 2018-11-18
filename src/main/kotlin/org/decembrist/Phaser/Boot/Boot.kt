@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Boot")]
 package org.decembrist.Phaser.Boot
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.FPSConfig
 import org.decembrist.utils.GameConfig
@@ -55,7 +56,7 @@ open external class Config(GameConfig: GameConfig? = definedExternally /* null *
     open var failIfMajorPerformanceCaveat: Boolean = definedExternally
     open var powerPreference: String = definedExternally
     open var batchSize: Number = definedExternally
-    open var backgroundColor: org.decembrist.Phaser.Display.Display.Color = definedExternally
+    open var backgroundColor: Display.Color = definedExternally
     open var preBoot: (game: Phaser.Game) -> Unit = definedExternally
     open var postBoot: (game: Phaser.Game) -> Unit = definedExternally
     open var physics: Any = definedExternally

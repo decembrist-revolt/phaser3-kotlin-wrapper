@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("GameObjects.Particles")]
 package org.decembrist.Phaser.GameObjects.Particles
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.*
@@ -234,11 +235,11 @@ open external class ParticleEmitter(manager: ParticleEmitterManager, config: Par
     override fun setBlendMode(value: String): ParticleEmitter /* this */ = definedExternally
     override fun setBlendMode(value: Phaser.BlendModes): ParticleEmitter /* this */ = definedExternally
     override var mask: dynamic /* Phaser.Display.Masks.BitmapMask | Phaser.Display.Masks.GeometryMask */ = definedExternally
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.BitmapMask): ParticleEmitter /* this */ = definedExternally
-    override fun setMask(mask: org.decembrist.Phaser.Display.Masks.GeometryMask): ParticleEmitter /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.BitmapMask): ParticleEmitter /* this */ = definedExternally
+    override fun setMask(mask: Display.Masks.GeometryMask): ParticleEmitter /* this */ = definedExternally
     override fun clearMask(destroyMask: Boolean?): ParticleEmitter /* this */ = definedExternally
-    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): org.decembrist.Phaser.Display.Masks.BitmapMask = definedExternally
-    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): org.decembrist.Phaser.Display.Masks.GeometryMask = definedExternally
+    override fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject?): Display.Masks.BitmapMask = definedExternally
+    override fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics?): Display.Masks.GeometryMask = definedExternally
     override var scrollFactorX: Number = definedExternally
     override var scrollFactorY: Number = definedExternally
     override fun setScrollFactor(x: Number, y: Number?): ParticleEmitter /* this */ = definedExternally

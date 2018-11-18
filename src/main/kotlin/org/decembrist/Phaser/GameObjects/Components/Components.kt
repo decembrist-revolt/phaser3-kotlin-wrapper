@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("GameObjects.Components")]
 package org.decembrist.Phaser.GameObjects.Components
 
+import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
 import org.decembrist.Phaser.Math.Vector2
 import org.decembrist.Phaser.Phaser
@@ -115,12 +116,12 @@ external interface GetBounds {
     fun getBounds(output: Geom.Rectangle? = definedExternally /* null */): Geom.Rectangle
 }
 external interface Mask {
-    var mask: dynamic /* Phaser.Display.Masks.BitmapMask | Phaser.Display.Masks.GeometryMask */
-    fun setMask(mask: org.decembrist.Phaser.Display.Masks.BitmapMask): Mask /* this */
-    fun setMask(mask: org.decembrist.Phaser.Display.Masks.GeometryMask): Mask /* this */
+    var mask: dynamic /* Phaser.Display.Display.Masks.BitmapMask | Phaser.Display.Display.Masks.GeometryMask */
+    fun setMask(mask: Display.Masks.BitmapMask): Mask /* this */
+    fun setMask(mask: Display.Masks.GeometryMask): Mask /* this */
     fun clearMask(destroyMask: Boolean? = definedExternally /* null */): Mask /* this */
-    fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject? = definedExternally /* null */): org.decembrist.Phaser.Display.Masks.BitmapMask
-    fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics? = definedExternally /* null */): org.decembrist.Phaser.Display.Masks.GeometryMask
+    fun createBitmapMask(renderable: org.decembrist.Phaser.GameObjects.GameObject? = definedExternally /* null */): Display.Masks.BitmapMask
+    fun createGeometryMask(graphics: org.decembrist.Phaser.GameObjects.Graphics? = definedExternally /* null */): Display.Masks.GeometryMask
 }
 external interface Origin {
     var originX: Number

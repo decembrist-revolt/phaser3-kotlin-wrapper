@@ -10,7 +10,7 @@
 
     <name>phaser3-kotlin-wrapper</name>
 
-    <description>Wrapper for phaser3 </description>
+    <description>Kotlin wrapper for phaser3</description>
     <url>http://decembrist.org/</url>
 
     <licenses>
