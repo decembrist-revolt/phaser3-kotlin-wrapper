@@ -5,16 +5,54 @@
 
     <groupId>org.decembrist</groupId>
     <artifactId>phaser3-kotlin-wrapper</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>phaser3-kotlin-wrapper</name>
 
+    <description>Wrapper for phaser3 </description>
+    <url>http://decembrist.org/</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <url>https://github.com/decembrist-revolt/decembrist-kotlin2js-reflection</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Nikita Pometun</name>
+            <email>decembrist.org@gmail.com</email>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.3.0</kotlin.version>
-        <kotlin.code.style>official</kotlin.code.style>
-        <junit.version>4.12</junit.version>
+        <dokka.version>0.9.17</dokka.version>
+        <nexus.staging.maven.plugin>1.6.8</nexus.staging.maven.plugin>
+        <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
+        <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
     </properties>
 
     <dependencies>
@@ -43,34 +81,84 @@
                         </goals>
                         <configuration>
                             <sourceMap>true</sourceMap> <!-- source map is useful for debugging in tools that support source maps -->
-                            <outputFile>${project.build.outputDirectory}/${project.artifactId}.js</outputFile>
                             <sourceMapEmbedSources>always</sourceMapEmbedSources>
                             <moduleKind>umd</moduleKind>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            
-            <!-- unpack kotlin.js to target/classes/lib for example index.html -->
+
             <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>extract-kotlinjs</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includeArtifactIds>kotlin-stdlib-js</includeArtifactIds>
-                            <outputDirectory>${build.outputDirectory}/lib</outputDirectory>
-                            <includes>**\/*.js</includes>
-                            <excludes>**\/*.meta.js</excludes> <!-- we don't need meta.js files in runtime -->
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>org.decembrist</groupId>
+                <artifactId>decembrist-jar-plugin</artifactId>
+                <version>0.9.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <target>JS</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${nexus.staging.maven.plugin}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven.source.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jetbrains.dokka</groupId>
+                        <artifactId>dokka-maven-plugin</artifactId>
+                        <version>${dokka.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>javadocJar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven.gpg.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
