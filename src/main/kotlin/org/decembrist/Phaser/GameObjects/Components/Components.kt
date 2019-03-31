@@ -4,7 +4,7 @@ package org.decembrist.Phaser.GameObjects.Components
 
 import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
-import org.decembrist.Phaser.Math.Vector2
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.khronos.webgl.Float32Array
 import org.w3c.dom.CanvasRenderingContext2D
@@ -102,17 +102,17 @@ external interface Flip {
     fun resetFlip(): Flip /* this */
 }
 external interface GetBounds {
-    fun <O : Vector2> getCenter(output: O? = definedExternally /* null */): O
-    fun <O : Vector2> getTopLeft(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
-    fun <O : Vector2> getTopRight(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
-    fun <O : Vector2> getBottomLeft(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
-    fun <O : Vector2> getBottomRight(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
+    fun <O : Math.Vector2> getCenter(output: O? = definedExternally /* null */): O
+    fun <O : Math.Vector2> getTopLeft(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
+    fun <O : Math.Vector2> getTopRight(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
+    fun <O : Math.Vector2> getBottomLeft(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
+    fun <O : Math.Vector2> getBottomRight(output: O? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): O
     fun <O : Geom.Rectangle> getBounds(output: O? = definedExternally /* null */): O
-    fun getCenter(output: Vector2? = definedExternally /* null */): Vector2
-    fun getTopLeft(output: Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Vector2
-    fun getTopRight(output: Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Vector2
-    fun getBottomLeft(output: Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Vector2
-    fun getBottomRight(output: Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Vector2
+    fun getCenter(output: Math.Vector2? = definedExternally /* null */): Math.Vector2
+    fun getTopLeft(output: Math.Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Math.Vector2
+    fun getTopRight(output: Math.Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Math.Vector2
+    fun getBottomLeft(output: Math.Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Math.Vector2
+    fun getBottomRight(output: Math.Vector2? = definedExternally /* null */, includeParent: Boolean? = definedExternally /* null */): Math.Vector2
     fun getBounds(output: Geom.Rectangle? = definedExternally /* null */): Geom.Rectangle
 }
 external interface Mask {
@@ -237,7 +237,7 @@ open external class TransformMatrix(a: Number? = definedExternally /* null */, b
     open fun multiplyWithOffset(src: TransformMatrix, offsetX: Number, offsetY: Number): TransformMatrix /* this */ = definedExternally
     open fun transform(a: Number, b: Number, c: Number, d: Number, tx: Number, ty: Number): TransformMatrix /* this */ = definedExternally
     open fun transformPoint(x: Number, y: Number, point: Any?): dynamic /* Any? | Phaser.Math.Vector2 | Phaser.Geom.Point */ = definedExternally
-    open fun transformPoint(x: Number, y: Number, point: org.decembrist.Phaser.Math.Vector2): dynamic /* Any? | Phaser.Math.Vector2 | Phaser.Geom.Point */ = definedExternally
+    open fun transformPoint(x: Number, y: Number, point: Math.Vector2): dynamic /* Any? | Phaser.Math.Vector2 | Phaser.Geom.Point */ = definedExternally
     open fun transformPoint(x: Number, y: Number, point: Geom.Point): dynamic /* Any? | Phaser.Math.Vector2 | Phaser.Geom.Point */ = definedExternally
     open fun invert(): TransformMatrix /* this */ = definedExternally
     open fun copyFrom(src: TransformMatrix): TransformMatrix /* this */ = definedExternally
@@ -248,7 +248,7 @@ open external class TransformMatrix(a: Number? = definedExternally /* null */, b
     open fun setTransform(a: Number, b: Number, c: Number, d: Number, tx: Number, ty: Number): TransformMatrix /* this */ = definedExternally
     open fun decomposeMatrix(): Any = definedExternally
     open fun applyITRS(x: Number, y: Number, rotation: Number, scaleX: Number, scaleY: Number): TransformMatrix /* this */ = definedExternally
-    open fun applyInverse(x: Number, y: Number, output: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun applyInverse(x: Number, y: Number, output: Math.Vector2? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun getX(x: Number, y: Number): Number = definedExternally
     open fun getY(x: Number, y: Number): Number = definedExternally
     open fun getCSSMatrix(): String = definedExternally

@@ -3,6 +3,7 @@
 package org.decembrist.Phaser.Loader.FileTypes
 
 import org.decembrist.utils.AudioContext
+import org.decembrist.utils.Config
 import org.decembrist.utils.XHRSettingsObject
 
 open external class AnimationJSONFile : org.decembrist.Phaser.Loader.File {
@@ -11,7 +12,7 @@ open external class AnimationJSONFile : org.decembrist.Phaser.Loader.File {
     override fun onProcess(): Unit = definedExternally
     open fun onLoadComplete(): Unit = definedExternally
 }
-external interface AtlasJSONFileConfig {
+external interface AtlasJSONFileConfig: Config {
     var key: String
     var textureURL: String? get() = definedExternally; set(value) = definedExternally
     var textureExtension: String? get() = definedExternally; set(value) = definedExternally
@@ -28,7 +29,7 @@ open external class AtlasJSONFile : org.decembrist.Phaser.Loader.MultiFile {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.AtlasJSONFileConfig, textureURL: Array<String>? = definedExternally /* null */, atlasURL: String? = definedExternally /* null */, textureXhrSettings: XHRSettingsObject? = definedExternally /* null */, atlasXhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface AtlasXMLFileConfig {
+external interface AtlasXMLFileConfig: Config {
     var key: String
     var textureURL: String? get() = definedExternally; set(value) = definedExternally
     var textureExtension: String? get() = definedExternally; set(value) = definedExternally
@@ -45,7 +46,7 @@ open external class AtlasXMLFile : org.decembrist.Phaser.Loader.MultiFile {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.AtlasXMLFileConfig, textureURL: Array<String>? = definedExternally /* null */, atlasURL: String? = definedExternally /* null */, textureXhrSettings: XHRSettingsObject? = definedExternally /* null */, atlasXhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface AudioFileConfig {
+external interface AudioFileConfig: Config {
     var key: String
     var urlConfig: String? get() = definedExternally; set(value) = definedExternally
     var xhrSettings: XHRSettingsObject? get() = definedExternally; set(value) = definedExternally
@@ -56,7 +57,7 @@ open external class AudioFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.AudioFileConfig, urlConfig: Any? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */, audioContext: AudioContext? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface AudioSpriteFileConfig {
+external interface AudioSpriteFileConfig: Config {
     var key: String
     var jsonURL: String
     var jsonXhrSettings: XHRSettingsObject? get() = definedExternally; set(value) = definedExternally
@@ -68,7 +69,7 @@ open external class AudioSpriteFile : org.decembrist.Phaser.Loader.MultiFile {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: String, jsonURL: String, audioURL: Any? = definedExternally /* null */, audioConfig: Any? = definedExternally /* null */, audioXhrSettings: XHRSettingsObject? = definedExternally /* null */, jsonXhrSettings: XHRSettingsObject? = definedExternally /* null */)
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.AudioSpriteFileConfig, jsonURL: String, audioURL: Any? = definedExternally /* null */, audioConfig: Any? = definedExternally /* null */, audioXhrSettings: XHRSettingsObject? = definedExternally /* null */, jsonXhrSettings: XHRSettingsObject? = definedExternally /* null */)
 }
-external interface BinaryFileConfig {
+external interface BinaryFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -80,7 +81,7 @@ open external class BinaryFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.BinaryFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */, dataType: Any? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface BitmapFontFileConfig {
+external interface BitmapFontFileConfig: Config {
     var key: String
     var textureURL: String? get() = definedExternally; set(value) = definedExternally
     var textureExtension: String? get() = definedExternally; set(value) = definedExternally
@@ -97,7 +98,7 @@ open external class BitmapFontFile : org.decembrist.Phaser.Loader.MultiFile {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.BitmapFontFileConfig, textureURL: Array<String>? = definedExternally /* null */, fontDataURL: String? = definedExternally /* null */, textureXhrSettings: XHRSettingsObject? = definedExternally /* null */, fontDataXhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface GLSLFileConfig {
+external interface GLSLFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -116,7 +117,7 @@ open external class HTML5AudioFile : org.decembrist.Phaser.Loader.File {
     open fun onProgress(): Unit = definedExternally
     override fun load(): Unit = definedExternally
 }
-external interface HTMLFileConfig {
+external interface HTMLFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -127,7 +128,7 @@ open external class HTMLFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.HTMLFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface HTMLTextureFileConfig {
+external interface HTMLTextureFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -141,7 +142,7 @@ open external class HTMLTextureFile : org.decembrist.Phaser.Loader.File {
     override fun onProcess(): Unit = definedExternally
     override fun addToCache(): Unit = definedExternally
 }
-external interface ImageFrameConfig {
+external interface ImageFrameConfig: Config {
     var frameWidth: Number
     var frameHeight: Number? get() = definedExternally; set(value) = definedExternally
     var startFrame: Number? get() = definedExternally; set(value) = definedExternally
@@ -149,7 +150,7 @@ external interface ImageFrameConfig {
     var margin: Number? get() = definedExternally; set(value) = definedExternally
     var spacing: Number? get() = definedExternally; set(value) = definedExternally
 }
-external interface ImageFileConfig {
+external interface ImageFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -165,7 +166,7 @@ open external class ImageFile : org.decembrist.Phaser.Loader.File {
     override fun onProcess(): Unit = definedExternally
     override fun addToCache(): Unit = definedExternally
 }
-external interface JSONFileConfig {
+external interface JSONFileConfig: Config {
     var key: String
     var url: dynamic /* String | Any */ get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -177,7 +178,7 @@ open external class JSONFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.JSONFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */, dataKey: String? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface MultiAtlasFileConfig {
+external interface MultiAtlasFileConfig: Config {
     var key: String
     var atlasURL: String? get() = definedExternally; set(value) = definedExternally
     var atlasExtension: String? get() = definedExternally; set(value) = definedExternally
@@ -199,7 +200,7 @@ open external class PackFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.JSONFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */, dataKey: String? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface PluginFileConfig {
+external interface PluginFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -212,7 +213,7 @@ open external class PluginFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.PluginFileConfig, url: String? = definedExternally /* null */, start: Boolean? = definedExternally /* null */, mapping: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface ScenePluginFileConfig {
+external interface ScenePluginFileConfig: Config {
     var key: String
     var url: dynamic /* String | Function<*> */ get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -225,7 +226,7 @@ open external class ScenePluginFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.ScenePluginFileConfig, url: String? = definedExternally /* null */, systemKey: String? = definedExternally /* null */, sceneKey: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface ScriptFileConfig {
+external interface ScriptFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -236,7 +237,7 @@ open external class ScriptFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.ScriptFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface SpriteSheetFileConfig {
+external interface SpriteSheetFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -251,12 +252,12 @@ open external class SpriteSheetFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.SpriteSheetFileConfig, url: Array<String>? = definedExternally /* null */, frameConfig: org.decembrist.Phaser.Loader.FileTypes.ImageFrameConfig? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface SVGSizeConfig {
+external interface SVGSizeConfig: Config {
     var width: Number? get() = definedExternally; set(value) = definedExternally
     var height: Number? get() = definedExternally; set(value) = definedExternally
     var scale: Number? get() = definedExternally; set(value) = definedExternally
 }
-external interface SVGFileConfig {
+external interface SVGFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -269,7 +270,7 @@ open external class SVGFile : org.decembrist.Phaser.Loader.File {
     override fun onProcess(): Unit = definedExternally
     override fun addToCache(): Unit = definedExternally
 }
-external interface TextFileConfig {
+external interface TextFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -280,7 +281,7 @@ open external class TextFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.TextFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun onProcess(): Unit = definedExternally
 }
-external interface TilemapCSVFileConfig {
+external interface TilemapCSVFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -292,7 +293,7 @@ open external class TilemapCSVFile : org.decembrist.Phaser.Loader.File {
     override fun onProcess(): Unit = definedExternally
     override fun addToCache(): Unit = definedExternally
 }
-external interface TilemapImpactFileConfig {
+external interface TilemapImpactFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -303,7 +304,7 @@ open external class TilemapImpactFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.TilemapImpactFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface TilemapJSONFileConfig {
+external interface TilemapJSONFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally
@@ -314,7 +315,7 @@ open external class TilemapJSONFile : org.decembrist.Phaser.Loader.File {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.TilemapJSONFileConfig, url: String? = definedExternally /* null */, xhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface UnityAtlasFileConfig {
+external interface UnityAtlasFileConfig: Config {
     var key: String
     var textureURL: String? get() = definedExternally; set(value) = definedExternally
     var textureExtension: String? get() = definedExternally; set(value) = definedExternally
@@ -331,7 +332,7 @@ open external class UnityAtlasFile : org.decembrist.Phaser.Loader.MultiFile {
     constructor(loader: org.decembrist.Phaser.Loader.LoaderPlugin, key: org.decembrist.Phaser.Loader.FileTypes.UnityAtlasFileConfig, textureURL: Array<String>? = definedExternally /* null */, atlasURL: String? = definedExternally /* null */, textureXhrSettings: XHRSettingsObject? = definedExternally /* null */, atlasXhrSettings: XHRSettingsObject? = definedExternally /* null */)
     override fun addToCache(): Unit = definedExternally
 }
-external interface XMLFileConfig {
+external interface XMLFileConfig: Config {
     var key: String
     var url: String? get() = definedExternally; set(value) = definedExternally
     var extension: String? get() = definedExternally; set(value) = definedExternally

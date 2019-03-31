@@ -2,6 +2,8 @@
 @file:[JsModule("phaser") JsQualifier("Physics.Matter.Components")]
 package org.decembrist.Phaser.Physics.Matter.Components
 
+import org.decembrist.Phaser.Math.Math
+
 external interface Bounce {
     fun setBounce(value: Number): org.decembrist.Phaser.GameObjects.GameObject
 }
@@ -12,8 +14,8 @@ external interface Collision {
     fun setCollidesWith(categories: Array<Number>): org.decembrist.Phaser.GameObjects.GameObject
 }
 external interface Force {
-    fun applyForce(force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject
-    fun applyForceFrom(position: org.decembrist.Phaser.Math.Vector2, force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject
+    fun applyForce(force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject
+    fun applyForceFrom(position: Math.Vector2, force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject
     fun thrust(speed: Number): org.decembrist.Phaser.GameObjects.GameObject
     fun thrustLeft(speed: Number): org.decembrist.Phaser.GameObjects.GameObject
     fun thrustRight(speed: Number): org.decembrist.Phaser.GameObjects.GameObject
@@ -65,7 +67,7 @@ external interface Transform {
     fun setRotation(radians: Number? /* null */): Transform /* this */
     fun setFixedRotation(): Transform /* this */
     fun setAngle(degrees: Number? /* null */): Transform /* this */
-    fun setScale(x: Number? = definedExternally /* null */, y: Number? = definedExternally /* null */, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */): Transform /* this */
+    fun setScale(x: Number? = definedExternally /* null */, y: Number? = definedExternally /* null */, point: Math.Vector2? = definedExternally /* null */): Transform /* this */
 }
 external interface Velocity {
     fun setAngularVelocity(value: Number): org.decembrist.Phaser.GameObjects.GameObject

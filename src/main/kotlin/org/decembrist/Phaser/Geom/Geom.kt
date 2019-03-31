@@ -2,6 +2,8 @@
 
 package org.decembrist.Phaser.Geom
 
+import org.decembrist.Phaser.Math.Math
+
 external object Geom {
 
     open class Circle(
@@ -257,10 +259,10 @@ external object Geom {
             y2: Number? = definedExternally /* null */
         ): Geom.Line = definedExternally
 
-        open fun <O : org.decembrist.Phaser.Math.Vector2> getPointA(vec2: O? = definedExternally /* null */): O =
+        open fun <O : Math.Vector2> getPointA(vec2: O? = definedExternally /* null */): O =
             definedExternally
 
-        open fun <O : org.decembrist.Phaser.Math.Vector2> getPointB(vec2: O? = definedExternally /* null */): O =
+        open fun <O : Math.Vector2> getPointB(vec2: O? = definedExternally /* null */): O =
             definedExternally
 
         open var left: Number = definedExternally
@@ -630,7 +632,7 @@ external object Geom {
             fun <O : Geom.Rectangle> Offset(rect: O, x: Number, y: Number): O = definedExternally
             fun <O : Geom.Rectangle> OffsetPoint(
                 rect: O,
-                point: org.decembrist.Phaser.Math.Vector2
+                point: Math.Vector2
             ): O = definedExternally
 
             fun <O : Geom.Rectangle> OffsetPoint(
@@ -750,7 +752,7 @@ external object Geom {
                 out: O? = definedExternally /* null */
             ): O = definedExternally
 
-            fun <O : org.decembrist.Phaser.Math.Vector2> CircumCenter(
+            fun <O : Math.Vector2> CircumCenter(
                 triangle: Geom.Triangle,
                 out: O? = definedExternally /* null */
             ): O = definedExternally

@@ -5,6 +5,7 @@ package org.decembrist.Phaser.Cameras.Scene2D
 import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.GameObjects.Components.Alpha
 import org.decembrist.Phaser.Geom.Geom
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.InputColorObject
 import org.decembrist.utils.InputJSONCameraObject
@@ -30,17 +31,17 @@ open external class BaseCamera(x: Number, y: Number, width: Number, height: Numb
     open var backgroundColor: Display.Color = definedExternally
     override var alpha: Number = definedExternally
     open var disableCull: Boolean = definedExternally
-    open var midPoint: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var midPoint: Math.Vector2 = definedExternally
     open var originX: Number = definedExternally
     open var originY: Number = definedExternally
     open fun setAlpha(value: Number? = definedExternally /* null */): BaseCamera /* this */ = definedExternally
     open fun setOrigin(x: Number? = definedExternally /* null */, y: Number? = definedExternally /* null */): BaseCamera /* this */ = definedExternally
-    open fun getScroll(x: Number, y: Number, out: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun getScroll(x: Number, y: Number, out: Math.Vector2? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun centerOn(x: Number, y: Number): BaseCamera = definedExternally
     open fun centerToBounds(): BaseCamera = definedExternally
     open fun centerToSize(): BaseCamera = definedExternally
     open fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> cull(renderableObjects: G): G = definedExternally
-    open fun <O : org.decembrist.Phaser.Math.Vector2> getWorldPoint(x: Number, y: Number, output: O? = definedExternally /* null */): O = definedExternally
+    open fun <O : Math.Vector2> getWorldPoint(x: Number, y: Number, output: O? = definedExternally /* null */): O = definedExternally
     open fun ignore(entries: org.decembrist.Phaser.GameObjects.GameObject): BaseCamera = definedExternally
     open fun ignore(entries: Array<org.decembrist.Phaser.GameObjects.GameObject>): BaseCamera = definedExternally
     open fun ignore(entries: org.decembrist.Phaser.GameObjects.Group): BaseCamera = definedExternally
@@ -91,8 +92,8 @@ open external class Camera(x: Number, y: Number, width: Number, height: Number) 
     open var shakeEffect: org.decembrist.Phaser.Cameras.Scene2D.Effects.Shake = definedExternally
     open var panEffect: org.decembrist.Phaser.Cameras.Scene2D.Effects.Pan = definedExternally
     open var zoomEffect: org.decembrist.Phaser.Cameras.Scene2D.Effects.Zoom = definedExternally
-    open var lerp: org.decembrist.Phaser.Math.Vector2 = definedExternally
-    open var followOffset: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var lerp: Math.Vector2 = definedExternally
+    open var followOffset: Math.Vector2 = definedExternally
     open var deadzone: Geom.Rectangle = definedExternally
     open var renderToTexture: Boolean = definedExternally
     open var canvas: HTMLCanvasElement = definedExternally

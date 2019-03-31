@@ -4,7 +4,7 @@ package org.decembrist.Phaser.Physics.Matter
 
 import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
-import org.decembrist.Phaser.Math.Vector2
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.decembrist.Phaser.Physics.Matter.Components.Transform
 
@@ -102,17 +102,17 @@ open external class Image : org.decembrist.Phaser.GameObjects.Image, org.decembr
     override fun setFlipY(value: Boolean): Image /* this */ = definedExternally
     override fun setFlip(x: Boolean, y: Boolean): Image /* this */ = definedExternally
     override fun resetFlip(): Image /* this */ = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
     override fun <O : Geom.Rectangle> getBounds(output: O? /* null */): O = definedExternally
-    override fun getCenter(output: Vector2?): Vector2
-    override fun getTopLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getTopRight(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
+    override fun getCenter(output: Math.Vector2?): Math.Vector2
+    override fun getTopLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getTopRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
     override fun setMask(mask: Display.Masks.BitmapMask): Image /* this */ = definedExternally
     override fun setMask(mask: Display.Masks.GeometryMask): Image /* this */ = definedExternally
@@ -144,7 +144,7 @@ open external class Image : org.decembrist.Phaser.GameObjects.Image, org.decembr
     override fun setPosition(x: Number?, y: Number?, z: Number?, w: Number?): Image /* this */ = definedExternally
     override fun setRandomPosition(x: Number?, y: Number?, width: Number?, height: Number?): Image /* this */ = definedExternally
     override fun setPosition(x: Number?, y: Number?): Transform
-    override fun setScale(x: Number?, y: Number?, point: Vector2?): Transform
+    override fun setScale(x: Number?, y: Number?, point: Math.Vector2?): Transform
     override fun setRotation(radians: Number?): Image /* this */ = definedExternally
     override fun setAngle(degrees: Number?): Image /* this */ = definedExternally
     override fun setScale(x: Number, y: Number?): Image /* this */ = definedExternally
@@ -160,8 +160,8 @@ open external class Image : org.decembrist.Phaser.GameObjects.Image, org.decembr
     override fun setCollisionGroup(value: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun setCollidesWith(categories: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun setCollidesWith(categories: Array<Number>): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
-    override fun applyForce(force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
-    override fun applyForceFrom(position: org.decembrist.Phaser.Math.Vector2, force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
+    override fun applyForce(force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
+    override fun applyForceFrom(position: Math.Vector2, force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrust(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrustLeft(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrustRight(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
@@ -269,17 +269,17 @@ open external class Sprite : org.decembrist.Phaser.GameObjects.Sprite, org.decem
     override fun setFlipY(value: Boolean): Sprite /* this */ = definedExternally
     override fun setFlip(x: Boolean, y: Boolean): Sprite /* this */ = definedExternally
     override fun resetFlip(): Sprite /* this */ = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
     override fun <O : Geom.Rectangle> getBounds(output: O? /* null */): O = definedExternally
-    override fun getCenter(output: Vector2?): Vector2
-    override fun getTopLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getTopRight(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
+    override fun getCenter(output: Math.Vector2?): Math.Vector2
+    override fun getTopLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getTopRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
     override fun setMask(mask: Display.Masks.BitmapMask): Sprite /* this */ = definedExternally
     override fun setMask(mask: Display.Masks.GeometryMask): Sprite /* this */ = definedExternally
@@ -311,7 +311,7 @@ open external class Sprite : org.decembrist.Phaser.GameObjects.Sprite, org.decem
     override fun setPosition(x: Number?, y: Number?, z: Number?, w: Number?): Sprite /* this */ = definedExternally
     override fun setRandomPosition(x: Number?, y: Number?, width: Number?, height: Number?): Sprite /* this */ = definedExternally
     override fun setPosition(x: Number?, y: Number?): Transform
-    override fun setScale(x: Number?, y: Number?, point: Vector2?): Transform
+    override fun setScale(x: Number?, y: Number?, point: Math.Vector2?): Transform
     override fun setRotation(radians: Number?): Sprite /* this */ = definedExternally
     override fun setAngle(degrees: Number?): Sprite /* this */ = definedExternally
     override fun setScale(x: Number, y: Number?): Sprite /* this */ = definedExternally
@@ -327,8 +327,8 @@ open external class Sprite : org.decembrist.Phaser.GameObjects.Sprite, org.decem
     override fun setCollisionGroup(value: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun setCollidesWith(categories: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun setCollidesWith(categories: Array<Number>): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
-    override fun applyForce(force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
-    override fun applyForceFrom(position: org.decembrist.Phaser.Math.Vector2, force: org.decembrist.Phaser.Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
+    override fun applyForce(force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
+    override fun applyForceFrom(position: Math.Vector2, force: Math.Vector2): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrust(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrustLeft(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
     override fun thrustRight(speed: Number): org.decembrist.Phaser.GameObjects.GameObject = definedExternally
@@ -396,11 +396,11 @@ open external class PointerConstraint(scene: Phaser.Scene, world: World, options
     open var camera: org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
     open var pointer: org.decembrist.Phaser.Input.Pointer = definedExternally
     open var active: Boolean = definedExternally
-    open var position: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var position: Math.Vector2 = definedExternally
     open var constraint: Any = definedExternally
     open fun onDown(pointer: org.decembrist.Phaser.Input.Pointer): Unit = definedExternally
     open fun onUp(): Unit = definedExternally
-    open fun getBodyPart(body: org.decembrist.MatterJS.Body, position: org.decembrist.Phaser.Math.Vector2): Boolean = definedExternally
+    open fun getBodyPart(body: org.decembrist.MatterJS.Body, position: Math.Vector2): Boolean = definedExternally
     open fun update(): Unit = definedExternally
     open fun destroy(): Unit = definedExternally
 }

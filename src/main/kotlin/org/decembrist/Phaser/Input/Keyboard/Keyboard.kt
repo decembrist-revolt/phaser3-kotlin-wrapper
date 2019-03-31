@@ -42,6 +42,7 @@ open external class KeyboardPlugin(sceneInputPlugin: org.decembrist.Phaser.Input
     open fun addKey(key: String): Key = definedExternally
     open fun addKey(key: Number): Key = definedExternally
     open fun addKey(key: Key): Key = definedExternally
+    open fun addKey(key: KeyCodes): Key = definedExternally
     open fun removeKey(key: String): Unit = definedExternally
     open fun removeKey(key: Number): Unit = definedExternally
     open fun removeKey(key: Key): Unit = definedExternally

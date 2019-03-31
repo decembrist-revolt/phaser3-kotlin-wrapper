@@ -1,6 +1,7 @@
 package org.decembrist.utils
 
 import org.decembrist.Phaser.Display.Display
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.w3c.dom.*
 import org.w3c.dom.events.EventTarget
@@ -656,7 +657,7 @@ external interface EdgeZoneSource: Config {
 }
 
 external interface RandomZoneSource: Config {
-    var getRandomPoint: (point: org.decembrist.Phaser.Math.Vector2) -> Unit
+    var getRandomPoint: (point: Math.Vector2) -> Unit
 }
 
 external interface PathConfig: Config {

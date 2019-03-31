@@ -3,7 +3,7 @@
 package org.decembrist.Phaser.Tilemaps
 
 import org.decembrist.Phaser.Geom.Geom
-import org.decembrist.Phaser.Math.Vector2
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.GameObjectConfig
 import org.khronos.webgl.WebGLTexture
@@ -116,11 +116,11 @@ open external class DynamicTilemapLayer : org.decembrist.Phaser.GameObjects.Game
     open fun swapByIndex(tileA: Number, tileB: Number, tileX: Number? = definedExternally /* null */, tileY: Number? = definedExternally /* null */, width: Number? = definedExternally /* null */, height: Number? = definedExternally /* null */): DynamicTilemapLayer = definedExternally
     open fun tileToWorldX(tileX: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
     open fun tileToWorldY(tileY: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
-    open fun tileToWorldXY(tileX: Number, tileY: Number, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun tileToWorldXY(tileX: Number, tileY: Number, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun weightedRandomize(tileX: Number? = definedExternally /* null */, tileY: Number? = definedExternally /* null */, width: Number? = definedExternally /* null */, height: Number? = definedExternally /* null */, weightedIndexes: Array<Any?>? = definedExternally /* null */): DynamicTilemapLayer = definedExternally
     open fun worldToTileX(worldX: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
     open fun worldToTileY(worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
-    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Math.Vector2 = definedExternally
     override fun clearAlpha(): DynamicTilemapLayer /* this */ = definedExternally
     override fun setAlpha(topLeft: Number?, topRight: Number?, bottomLeft: Number?, bottomRight: Number?): DynamicTilemapLayer /* this */ = definedExternally
     override fun setBlendMode(value: String): DynamicTilemapLayer /* this */ = definedExternally
@@ -134,17 +134,17 @@ open external class DynamicTilemapLayer : org.decembrist.Phaser.GameObjects.Game
     override fun setFlipY(value: Boolean): DynamicTilemapLayer /* this */ = definedExternally
     override fun setFlip(x: Boolean, y: Boolean): DynamicTilemapLayer /* this */ = definedExternally
     override fun resetFlip(): DynamicTilemapLayer /* this */ = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
     override fun <O : Geom.Rectangle> getBounds(output: O? /* null */): O = definedExternally
-    override fun getCenter(output: Vector2?): Vector2
-    override fun getTopLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getTopRight(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
+    override fun getCenter(output: Math.Vector2?): Math.Vector2
+    override fun getTopLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getTopRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
     override fun setOrigin(x: Number?, y: Number?): DynamicTilemapLayer /* this */ = definedExternally
     override fun setOriginFromFrame(): DynamicTilemapLayer /* this */ = definedExternally
@@ -323,10 +323,10 @@ open external class StaticTilemapLayer : org.decembrist.Phaser.GameObjects.GameO
     open fun setTileLocationCallback(tileX: Number, tileY: Number, width: Number, height: Number, callback: Function<*>, callbackContext: Any? = definedExternally /* null */): StaticTilemapLayer = definedExternally
     open fun tileToWorldX(tileX: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
     open fun tileToWorldY(tileY: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
-    open fun tileToWorldXY(tileX: Number, tileY: Number, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun tileToWorldXY(tileX: Number, tileY: Number, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun worldToTileX(worldX: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
     open fun worldToTileY(worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Number = definedExternally
-    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */): Math.Vector2 = definedExternally
     override fun destroy(): Unit = definedExternally
     override fun clearAlpha(): StaticTilemapLayer /* this */ = definedExternally
     override fun setAlpha(topLeft: Number?, topRight: Number?, bottomLeft: Number?, bottomRight: Number?): StaticTilemapLayer /* this */ = definedExternally
@@ -341,17 +341,17 @@ open external class StaticTilemapLayer : org.decembrist.Phaser.GameObjects.GameO
     override fun setFlipY(value: Boolean): StaticTilemapLayer /* this */ = definedExternally
     override fun setFlip(x: Boolean, y: Boolean): StaticTilemapLayer /* this */ = definedExternally
     override fun resetFlip(): StaticTilemapLayer /* this */ = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
-    override fun <O : org.decembrist.Phaser.Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getCenter(output: O? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getTopRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomLeft(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
+    override fun <O : Math.Vector2> getBottomRight(output: O? /* null */, includeParent: Boolean? /* null */): O = definedExternally
     override fun <O : Geom.Rectangle> getBounds(output: O? /* null */): O = definedExternally
-    override fun getCenter(output: Vector2?): Vector2
-    override fun getTopLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getTopRight(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomLeft(output: Vector2?, includeParent: Boolean?): Vector2
-    override fun getBottomRight(output: Vector2?, includeParent: Boolean?): Vector2
+    override fun getCenter(output: Math.Vector2?): Math.Vector2
+    override fun getTopLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getTopRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomLeft(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
+    override fun getBottomRight(output: Math.Vector2?, includeParent: Boolean?): Math.Vector2
     override fun getBounds(output: Geom.Rectangle?): Geom.Rectangle
     override fun setOrigin(x: Number?, y: Number?): StaticTilemapLayer /* this */ = definedExternally
     override fun setOriginFromFrame(): StaticTilemapLayer /* this */ = definedExternally
@@ -570,11 +570,11 @@ open external class Tilemap(scene: Phaser.Scene, mapData: MapData) {
     open fun swapByIndex(tileA: Number, tileB: Number, tileX: Number? = definedExternally /* null */, tileY: Number? = definedExternally /* null */, width: Number? = definedExternally /* null */, height: Number? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Tilemap = definedExternally
     open fun tileToWorldX(tileX: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Number = definedExternally
     open fun tileToWorldY(tileY: Number, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Number = definedExternally
-    open fun tileToWorldXY(tileX: Number, tileY: Number, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun tileToWorldXY(tileX: Number, tileY: Number, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun weightedRandomize(tileX: Number? = definedExternally /* null */, tileY: Number? = definedExternally /* null */, width: Number? = definedExternally /* null */, height: Number? = definedExternally /* null */, weightedIndexes: Array<Any?>? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Tilemap = definedExternally
     open fun worldToTileX(worldX: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Number = definedExternally
     open fun worldToTileY(worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Number = definedExternally
-    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open fun worldToTileXY(worldX: Number, worldY: Number, snapToFloor: Boolean? = definedExternally /* null */, point: Math.Vector2? = definedExternally /* null */, camera: org.decembrist.Phaser.Cameras.Scene2D.Camera? = definedExternally /* null */, layer: LayerData? = definedExternally /* null */): Math.Vector2 = definedExternally
     open fun convertLayerToStatic(): StaticTilemapLayer = definedExternally
     open fun getLayer(): LayerData = definedExternally
     open fun getLayerIndex(): Number = definedExternally

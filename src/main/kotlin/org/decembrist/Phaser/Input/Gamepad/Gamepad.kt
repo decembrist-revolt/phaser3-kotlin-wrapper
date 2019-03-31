@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Input.Gamepad")]
 package org.decembrist.Phaser.Input.Gamepad
 
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.GamepadHapticActuator
 import org.decembrist.utils.Pad
@@ -32,8 +33,8 @@ open external class Gamepad(manager: GamepadPlugin, pad: Pad) : org.decembrist.P
     open var buttons: Array<Button> = definedExternally
     open var axes: Array<Axis> = definedExternally
     open var vibration: GamepadHapticActuator = definedExternally
-    open var leftStick: org.decembrist.Phaser.Math.Vector2 = definedExternally
-    open var rightStick: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var leftStick: Math.Vector2 = definedExternally
+    open var rightStick: Math.Vector2 = definedExternally
     open fun getAxisTotal(): Number = definedExternally
     open fun getAxisValue(index: Number): Number = definedExternally
     open fun setAxisThreshold(value: Number): Unit = definedExternally

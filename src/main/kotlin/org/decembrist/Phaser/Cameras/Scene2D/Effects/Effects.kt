@@ -2,6 +2,7 @@
 @file:[JsModule("phaser") JsQualifier("Cameras.Scene2D.Effects")]
 package org.decembrist.Phaser.Cameras.Scene2D.Effects
 
+import org.decembrist.Phaser.Math.Math
 import org.w3c.dom.CanvasRenderingContext2D
 
 open external class Fade(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera) {
@@ -36,9 +37,9 @@ open external class Pan(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera) {
     open var camera: org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
     open var isRunning: Boolean = definedExternally
     open var duration: Number = definedExternally
-    open var source: org.decembrist.Phaser.Math.Vector2 = definedExternally
-    open var current: org.decembrist.Phaser.Math.Vector2 = definedExternally
-    open var destination: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var source: Math.Vector2 = definedExternally
+    open var current: Math.Vector2 = definedExternally
+    open var destination: Math.Vector2 = definedExternally
     open var ease: Function<*> = definedExternally
     open var progress: Number = definedExternally
     open fun start(x: Number, y: Number, duration: Number? = definedExternally /* null */, ease: String? = definedExternally /* null */, force: Boolean? = definedExternally /* null */, callback: ((camera: org.decembrist.Phaser.Cameras.Scene2D.Camera, progress: Number, x: Number, y: Number) -> Unit)? = definedExternally /* null */, context: Any? = definedExternally /* null */): org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
@@ -53,7 +54,7 @@ open external class Shake(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera) 
     open var camera: org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
     open var isRunning: Boolean = definedExternally
     open var duration: Number = definedExternally
-    open var intensity: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var intensity: Math.Vector2 = definedExternally
     open var progress: Number = definedExternally
     open fun start(duration: Number? = definedExternally /* null */, intensity: Number? = definedExternally /* null */, force: Boolean? = definedExternally /* null */, callback: ((camera: org.decembrist.Phaser.Cameras.Scene2D.Camera, progress: Number) -> Unit)? = definedExternally /* null */, context: Any? = definedExternally /* null */): org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
     open fun preRender(): Unit = definedExternally

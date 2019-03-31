@@ -4,6 +4,7 @@ package org.decembrist.Phaser.GameObjects.Particles
 
 import org.decembrist.Phaser.Display.Display
 import org.decembrist.Phaser.Geom.Geom
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.decembrist.utils.*
 
@@ -131,7 +132,7 @@ open external class ParticleEmitter(manager: ParticleEmitterManager, config: Par
     override var visible: Boolean = definedExternally
     override var blendMode: Number = definedExternally
     open var follow: org.decembrist.Phaser.GameObjects.GameObject = definedExternally
-    open var followOffset: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var followOffset: Math.Vector2 = definedExternally
     open var trackVisible: Boolean = definedExternally
     open var currentFrame: Number = definedExternally
     open var randomFrame: Boolean = definedExternally

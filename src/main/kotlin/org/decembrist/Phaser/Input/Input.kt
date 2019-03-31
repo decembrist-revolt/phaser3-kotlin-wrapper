@@ -3,6 +3,7 @@
 package org.decembrist.Phaser.Input
 
 import org.decembrist.Phaser.Geom.Geom
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.Phaser.Phaser
 import org.w3c.dom.HTMLCanvasElement
 
@@ -156,8 +157,8 @@ open external class Pointer(manager: InputManager, id: Number) {
     open var event: dynamic /* MouseEvent | TouchEvent */ = definedExternally
     open var camera: org.decembrist.Phaser.Cameras.Scene2D.Camera = definedExternally
     open var buttons: Number = definedExternally
-    open var position: org.decembrist.Phaser.Math.Vector2 = definedExternally
-    open var prevPosition: org.decembrist.Phaser.Math.Vector2 = definedExternally
+    open var position: Math.Vector2 = definedExternally
+    open var prevPosition: Math.Vector2 = definedExternally
     open var worldX: Number = definedExternally
     open var worldY: Number = definedExternally
     open var downX: Number = definedExternally
@@ -180,7 +181,7 @@ open external class Pointer(manager: InputManager, id: Number) {
     open var pointerId: Number = definedExternally
     open var active: Boolean = definedExternally
     open fun positionToCamera(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera, output: Any? = definedExternally /* null */): dynamic /* Any? | Phaser.Math.Vector2 */ = definedExternally
-    open fun positionToCamera(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera, output: org.decembrist.Phaser.Math.Vector2? = definedExternally /* null */): dynamic /* Any? | Phaser.Math.Vector2 */ = definedExternally
+    open fun positionToCamera(camera: org.decembrist.Phaser.Cameras.Scene2D.Camera, output: Math.Vector2? = definedExternally /* null */): dynamic /* Any? | Phaser.Math.Vector2 */ = definedExternally
     open fun noButtonDown(): Boolean = definedExternally
     open fun leftButtonDown(): Boolean = definedExternally
     open fun rightButtonDown(): Boolean = definedExternally

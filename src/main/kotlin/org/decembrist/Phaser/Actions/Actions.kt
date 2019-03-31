@@ -3,6 +3,7 @@
 package org.decembrist.Phaser.Actions
 
 import org.decembrist.Phaser.Geom.Geom
+import org.decembrist.Phaser.Math.Math
 import org.decembrist.utils.GridAlignConfig
 
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> Angle(items: G, value: Number, step: Number? = definedExternally /* null */, index: Number? = definedExternally /* null */, direction: Number? = definedExternally /* null */): G = definedExternally
@@ -48,7 +49,7 @@ external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SetVisibl
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SetX(items: G, value: Number, step: Number? = definedExternally /* null */, index: Number? = definedExternally /* null */, direction: Number? = definedExternally /* null */): G = definedExternally
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SetXY(items: G, x: Number, y: Number? = definedExternally /* null */, stepX: Number? = definedExternally /* null */, stepY: Number? = definedExternally /* null */, index: Number? = definedExternally /* null */, direction: Number? = definedExternally /* null */): G = definedExternally
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SetY(items: G, value: Number, step: Number? = definedExternally /* null */, index: Number? = definedExternally /* null */, direction: Number? = definedExternally /* null */): G = definedExternally
-external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>, O : org.decembrist.Phaser.Math.Vector2> ShiftPosition(items: G, x: Number, y: Number, direction: Number? = definedExternally /* null */, output: O? = definedExternally /* null */): O = definedExternally
+external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>, O : Math.Vector2> ShiftPosition(items: G, x: Number, y: Number, direction: Number? = definedExternally /* null */, output: O? = definedExternally /* null */): O = definedExternally
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> Shuffle(items: G): G = definedExternally
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SmootherStep(items: G, property: String, min: Number, max: Number, inc: Boolean? = definedExternally /* null */): G = definedExternally
 external fun <G : Array<org.decembrist.Phaser.GameObjects.GameObject>> SmoothStep(items: G, property: String, min: Number, max: Number, inc: Boolean? = definedExternally /* null */): G = definedExternally

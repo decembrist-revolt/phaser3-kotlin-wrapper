@@ -5,7 +5,7 @@
 
     <groupId>org.decembrist</groupId>
     <artifactId>phaser3-kotlin-wrapper</artifactId>
-    <version>0.1.8-SNAPSHOT</version>
+    <version>0.1.8</version>
     <packaging>jar</packaging>
 
     <name>phaser3-kotlin-wrapper</name>
@@ -53,6 +53,8 @@
         <nexus.staging.maven.plugin>1.6.8</nexus.staging.maven.plugin>
         <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
         <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
+        <decembrist.jar.plugin>0.9.1</decembrist.jar.plugin>
+        <maven.javadoc.plugin>2.7</maven.javadoc.plugin>
     </properties>
 
     <dependencies>
@@ -91,7 +93,7 @@
             <plugin>
                 <groupId>org.decembrist</groupId>
                 <artifactId>decembrist-jar-plugin</artifactId>
-                <version>0.9.0</version>
+                <version>${decembrist.jar.plugin}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <target>JS</target>
@@ -132,7 +134,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.7</version>
+                        <version>${maven.javadoc.plugin}</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>

@@ -132,7 +132,7 @@ external object Phaser {
         open var physics: org.decembrist.Phaser.Physics.Arcade.ArcadePhysics
         open var impact: org.decembrist.Phaser.Physics.Impact.ImpactPhysics
         open var matter: org.decembrist.Phaser.Physics.Matter.MatterPhysics
-        open fun update(time: Number = definedExternally, delta: Number = definedExternally): Unit = definedExternally
+        open fun update(time: Number, delta: Number): Unit = definedExternally
         open fun init(data: Any): Unit = definedExternally
         open fun create(data: Any): Unit = definedExternally
         open fun preload(): Unit = definedExternally
